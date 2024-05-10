@@ -42,10 +42,10 @@ public class ProductController {
     /**
      * Обработчик GET запроса по адресу "/product/{id}"
      * Отображает информацию о конкретном продукте
-     * @param id идентификатор продукта
-     * @param model объект для передачи данных в представление
-     * @param principal объект текущего пользователя
-     * @return страницу с информацией о продукте
+     *  id идентификатор продукта
+     * model объект для передачи данных в представление
+     * principal объект текущего пользователя
+     *  страницу с информацией о продукте
      */
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model, Principal principal) {
@@ -60,13 +60,13 @@ public class ProductController {
     /**
      * Обработчик POST запроса по адресу "/product/create"
      * Создает новый продукт с изображениями
-     * @param file1 первое изображение
-     * @param file2 второе изображение
-     * @param file3 третье изображение
-     * @param product создаваемый продукт
-     * @param principal объект текущего пользователя
-     * @return перенаправление на страницу с продуктами пользователя
-     * @throws IOException в случае ошибки ввода-вывода
+     * file1 первое изображение
+     * file2 второе изображение
+     *file3 третье изображение
+     * product создаваемый продукт
+     * principal объект текущего пользователя
+     *  перенаправление на страницу с продуктами пользователя
+     * throws IOException в случае ошибки ввода-вывода
      */
     @PostMapping("/product/create")
     public String createProduct(@RequestParam("file1") MultipartFile file1, @RequestParam("file2") MultipartFile file2,
@@ -78,8 +78,8 @@ public class ProductController {
     /**
      * Обработчик POST запроса по адресу "/product/delete/{id}"
      * Удаляет продукт по идентификатору
-     * @param id идентификатор удаляемого продукта
-     * @param principal объект текущего пользователя
+     *  id идентификатор удаляемого продукта
+     *  principal объект текущего пользователя
      * @return перенаправление на страницу с продуктами пользователя
      */
     @PostMapping("/product/delete/{id}")
@@ -91,9 +91,9 @@ public class ProductController {
     /**
      * Обработчик GET запроса по адресу "/my/products"
      * Отображает список продуктов пользователя
-     * @param principal объект текущего пользователя
-     * @param model объект для передачи данных в представление
-     * @return страницу с продуктами пользователя
+     *  principal объект текущего пользователя
+     *   model объект для передачи данных в представление
+     * return страницу с продуктами пользователя
      */
     @GetMapping("/my/products")
     public String userProducts(Principal principal, Model model) {

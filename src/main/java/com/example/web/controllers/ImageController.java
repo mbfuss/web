@@ -23,8 +23,8 @@ public class ImageController {
     /**
      * Обработчик GET запроса по адресу /images/{id}
      * Возвращает изображение по идентификатору
-     * @param id идентификатор изображения
-     * @return ResponseEntity содержащий информацию и само изображение
+     * id идентификатор изображения
+     *  ResponseEntity содержащий информацию и само изображение
      */
     @GetMapping("/images/{id}")
     private ResponseEntity<?> getImageById(@PathVariable Long id) {
